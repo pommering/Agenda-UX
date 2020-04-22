@@ -1,16 +1,44 @@
-body{
-	background: #f9f9f9;
-	color: #0e171c;
-	font: 300 16px 'Lato', sans-serif;
+*{
+	color: #1f281d;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
 	margin: 0;
+}
+body{
+	background: #f1f1f1;
 }
 a{
 	text-decoration: none;
 }
 h2{
-	font-size: 2em;
-	line-height: 1.25em;
-	margin: .25em 0;
+	margin-top: 20px;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+.btn-ant,
+.btn-pro{
+	position: absolute;
+	top: 50%;
+	line-height: 32px;
+	margin-top: -16px;
+	height: 32px;
+	width: 32px;
+	border: 2px solid #cbd1d2;
+	border-radius: 50%;
+	color: #cbd1d2;
+	font-size: 16px;
+	font-weight: bold;
+}
+.btn-ant:hover,
+.btn-pro:hover{
+	background: #cbd1d2;
+	color: #f9f9f9;
+}
+.btn-ant{
+	left: 80px;
+}
+.btn-pro{
+	right: 80px;
 }
 h3{
 	font-size: 1.5em;
@@ -18,96 +46,72 @@ h3{
 	margin: .33em 0;
 }
 table{
+	margin-top: 20px;
 	border-collapse: collapse;
-	border-spacing: 0;
 }
-.container{
-	height: 538px;
+.conteudo{
 	left: 50%;
-	margin: 0 0 0 -245px;
+	margin: 0 0 0 -250px;
 	position: absolute;
-	width: 510px;
+	width: 500px;
 }
-.calendar{
+.calendario{
 	text-align: center;
 }
-.calendar header{
+.calendario header{
 	position: relative;
 }
-.calendar h2{
-	text-transform: uppercase;
-}
-.calendar thead{
+.calendario thead{
 	font-weight: 600;
 	text-transform: uppercase;
 }
-.calendar tbody{
+
+.calendario tbody{
 	color: #7c8a95;
 }
-.calendar tbody td:hover{
-	border: 2px solid #00addf;
+.calendario tbody td{
+	cursor: pointer;
 }
-.calendar td{
-	border: 2px solid transparent;
-	border-radius: 50%;
-	display: inline-block;
-	height: 4em;
-	line-height: 4em;
+.calendario tbody td:hover{
+	background: rgba(0, 173, 223,0.8);
+	color: #f9f9f9;
+}
+.calendario td{
+	border: 1px solid #cbd1d2;
+	height: 71.4px;
 	text-align: center;
-	width: 4em;
+	width: 71.4px;
 }
-.calendar .prev-month,
-.calendar .next-month{
+.calendario .mes-anterior,
+.calendario .proximo-mes{
 	color: #cbd1d2;
 }
-.calendar .prev-month:hover,
-.calendar .next-month:hover{
-	border: 2px solid #cbd1d2;
+.calendario .mes-anterior:hover,
+.calendario .proximo-mes:hover{
+	background: #98a0a0;
 }
-.current-day{
+.dia-atual{
 	background: #00addf;
 	color: #f9f9f9;
 }
 .event{
-	cursor: pointer;
 	position: relative;
 }
-.event:after{
-	background: #00addf;
-	border-radius: 50%;
-	bottom: .5em;
-	display: block;
-	content: '';
-	height: .5em;
-	left: 50%;
-	margin: -.25em 0 0 -.25em;
-	position: absolute;
-	width: .5em;
-}
-.event.current-day:after{
+.event:hover::after{
 	background: #f9f9f9;
 }
-.btn-prev,
-.btn-next{
-	border: 2px solid #cbd1d2;
-	border-radius: 50%;
-	color: #cbd1d2;
-	height: 2em;
-	font-size: .75em;
-	line-height: 2em;
-	margin: -1em;
+.event:after{
+	content: '';
+	width: 7px;
+	height: 7px;
+	left: 50%;
+	bottom: 7px;
+	margin: -3.5px 0 0 -3.5px;
+	background: #00addf;
+	display: block;
 	position: absolute;
-	top: 50%;
-	width: 2em;
+	border-radius: 50%;
 }
-.btn-prev:hover,
-.btn-next:hover{
-	background: #cbd1d2;
-	color: #f9f9f9;
-}
-.btn-prev{
-	left: 6em;
-}
-.btn-next{
-	right: 6em;
+.event.dia-atual:after{
+	background: #f9f9f9;
 }

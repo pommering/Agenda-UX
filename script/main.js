@@ -15,19 +15,19 @@ document.addEventListener('DOMContentLoaded', function() {
 			let dt = new Date(year,month,i);
 			let atualDate = new Date();
 			var dayTable = tableDays.getElementsByTagName('td')[index];
-			dayTable.classList.remove('prev-month');
-			dayTable.classList.remove('next-month');
-			dayTable.classList.remove('current-day');
+			dayTable.classList.remove('mes-anterior');
+			dayTable.classList.remove('proximo-mes');
+			dayTable.classList.remove('dia-atual');
 			dayTable.innerHTML = dt.getDate();
 
 			if(dt.getFullYear() == atualDate.getFullYear() && dt.getMonth() == atualDate.getMonth() && dt.getDate() == atualDate.getDate()){
-				dayTable.classList.add("current-day");
+				dayTable.classList.add("dia-atual");
 			}
 			if(i < 1){
-				dayTable.classList.add("prev-month");
+				dayTable.classList.add("mes-anterior");
 			}
 			if(i > getLastDayThisMonth){
-				dayTable.classList.add("next-month");
+				dayTable.classList.add("proximo-mes");
 			}	
 		}
 	}
