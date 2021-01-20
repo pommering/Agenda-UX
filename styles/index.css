@@ -1,0 +1,334 @@
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #584596;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #51408a; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+ 
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font: 16px Roboto, sans-serif;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.info {
+  background: #725AC1;
+  padding: 0 40px;
+}
+
+.info header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 50vh;
+  margin: auto;
+}
+
+.info header .image {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+
+.info header .image img{
+  height: 100px;
+}
+
+.info header .image img.loading {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.info header h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+.info header span {
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 17px;
+}
+
+.info main {
+  position: relative;
+  height: 50vh;
+}
+
+.info main .agends {
+  height: 95%;
+  display: grid;
+}
+
+.info main .agends span {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.info main .agends div {
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+.info main .agends button {
+  background: #564593;
+  border:1px solid rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.info main .agends button:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+.info main .agends div a{
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+.info main .agends div a:hover{
+  background:#51408a;
+}
+
+
+.info main .agends div a span{
+  border-radius: 60px;
+  color: #725AC1;
+  background: #fff;
+  font-weight: 500;
+  padding: 2px 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.info main .agends div a p{
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.calendar {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background: #242038;
+  justify-content: space-between;
+}
+
+.calendar header{
+  font-size: 70px;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar header span{
+  cursor: pointer;
+}
+
+.calendar header span:last-of-type{
+  margin-left: 35px;
+}
+
+.calendar header span:last-of-type:hover svg path{
+  stroke: #d0d0d0;
+}
+
+.calendar header span:first-of-type {
+  margin-right: 35px;
+}
+
+.calendar header span:first-of-type:hover svg path {
+  stroke: #d0d0d0;
+}
+
+.calendar header span svg {
+  display: block;
+  margin:auto;
+}
+
+.calendar header p span {
+  margin: 0 !important;
+}
+
+.calendar main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.calendar footer {
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  text-align: center;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+th {
+  font-weight: 300;
+  
+}
+
+td {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+td.teste::after {
+  content: " ";
+  background: #8D86C9;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: -23px;
+  border-radius: 5px;
+}
+
+td.outherMount {
+  color: #918f9b;
+}
+
+tr:first-of-type th {
+  padding-bottom: 30px;
+}
+
+td:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+
+
+
+@media (max-width: 950px)
+{
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  
+  
+
+  .info main .agends div{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .info main .agends div::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+  
+  /* Track */
+  .info main .agends div::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  .info main .agends div::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .info main .agends div::-webkit-scrollbar-thumb:hover {
+    background: transparent; 
+  }
+
+  .info main .agends div a{
+    background: rgba(255,255,255,0.40);
+    width: 200px;
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+
+  .info main .agends div a span{
+    background: none;
+    color: #fff;
+  }
+
+  .info main .agends div a p{
+    font-weight: 300;
+    font-size: 18px;
+    margin: 10px 0 0 0 ;
+    text-align: center;
+  }
+
+  .calendar header{
+    font-size: 60px;
+    
+  }
+
+  .calendar header p span#month {
+    width: 150px;
+    display: inline-block;
+    
+  }
+
+}
