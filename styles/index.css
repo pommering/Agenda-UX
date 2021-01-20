@@ -266,35 +266,27 @@ td:hover {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  
-  
-
-  .info main .agends div{
+  .info main .agends div {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
 
   .info main .agends div::-webkit-scrollbar {
-    width: 10px;
-    
+    height: 10px;
   }
   
   /* Track */
   .info main .agends div::-webkit-scrollbar-track {
     background: transparent; 
+    
   }
    
   /* Handle */
   .info main .agends div::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: rgba(0,0,0,0.5);
     border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  .info main .agends div::-webkit-scrollbar-thumb:hover {
-    background: transparent; 
+    
   }
 
   .info main .agends div a{
